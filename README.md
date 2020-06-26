@@ -168,6 +168,8 @@ public static void Decrypt(XmlDocument doc)
 }
 ```
 
+Para obter certificados de teste para assinar, verificar assinaturas, crifra e decifrar dados utilize os comandos do repositório 
 
+https://github.com/diogoschimm/PowerShell-Autoridade-Certificadora-Certificados
 
 
