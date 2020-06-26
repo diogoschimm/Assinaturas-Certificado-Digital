@@ -13,9 +13,7 @@ private X509Certificate2 GetX509Certificate2()
 }
 ```
 
-## Assinando o XML com a chave Privada
-
-Vamos obter a chave privada do X509Certificate2 com o método GetRSAPrivateKey() e assinar o XML
+## XML
 
 ```csharp
 private string GetStrXml()
@@ -23,6 +21,10 @@ private string GetStrXml()
     return $@"<root><creditcard><number>19834209</number><expiry>02/02/2002</expiry></creditcard></root>";
 }
 ```
+
+## Assinando o XML com a chave Privada
+
+Vamos obter a chave privada do X509Certificate2 com o método GetRSAPrivateKey() e assinar o XML
 
 ```csharp
 private void btnAssinarXml_Click(object sender, EventArgs e)
