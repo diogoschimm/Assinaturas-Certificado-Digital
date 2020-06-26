@@ -43,7 +43,7 @@ private void btnAssinarXml_Click(object sender, EventArgs e)
 }
 ```
 
-Para assinar o XML vamos utilizar o seguinte código, o método ComputeSignature() cria a assinatura e o metodo GetXml() ontem o trecho de xml correpondente a assinatura, agora temos que colocar esse nó de assinatura dentro do xml original.
+Para assinar o XML vamos utilizar o seguinte código, o método ComputeSignature() cria a assinatura e o método GetXml() obtém o trecho de xml correpondente a assinatura, agora temos que colocar esse nó de assinatura dentro do xml original.
 
 ```csharp
 public static void SignXml(XmlDocument xmlDoc, RSA rsaKey)
@@ -65,7 +65,7 @@ public static void SignXml(XmlDocument xmlDoc, RSA rsaKey)
 
 ## Verificando a Assinatura do XML com a Chave Pública
 
-Para verificar o documento vamos utilizar o arquivo anteriormente criado (cujo nome é Assinado.xml) vamos obter a chave publica do certificado através do método GetRSAPublicKey() e vamos chamar o método VerifyXml.
+Para verificar o documento vamos utilizar o arquivo anteriormente criado (cujo nome é Assinado.xml) vamos obter a chave pública do certificado através do método GetRSAPublicKey() e vamos chamar o método VerifyXml.
 
 
 ```csharp
@@ -86,7 +86,7 @@ private void btnVerificarAssinatura_Click(object sender, EventArgs e)
 }
 ```
 
-O método VerifyXml recebe o objeto XmlDocument que representa o arquivo XML e a Chave RSA (nesse caso a chave publica) porque ciframos utilizando a Chave Privada.  Vamos utilizar o méotodo CheckSignature passando a Chave como parametro, esse método retorno um boleano.
+O método VerifyXml recebe o objeto XmlDocument que representa o arquivo XML e a Chave RSA (nesse caso a chave publica) porque ciframos utilizando a Chave Privada.  Vamos utilizar o método CheckSignature passando a Chave como parâmetro, esse método retorna um boleano.
 
 ```csharp
 public static bool VerifyXml(XmlDocument xmlDoc, RSA key)
@@ -125,7 +125,7 @@ private void btnCriptografar_Click(object sender, EventArgs e)
 }
 ```
 
-Para cifrar os dados vamos chamar o método Encrypt do EncryptedXml Object.
+Vamos chamar o método Encrypt do EncryptedXml Object.
 
 ```csharp
 public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, X509Certificate2 Cert)
