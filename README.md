@@ -168,7 +168,7 @@ public static void Decrypt(XmlDocument doc)
 }
 ```
 
-Para obter certificados de teste para assinar, verificar assinaturas, crifra e decifrar dados utilize os comandos do repositório 
+Para obter certificados de teste para assinar, verificar assinaturas, crifra e decifrar dados utilize os comandos do repositório, lá eu mostro como criar certificados digitais para teste em aplicações Asp.net
 
 https://github.com/diogoschimm/PowerShell-Autoridade-Certificadora-Certificados
 
